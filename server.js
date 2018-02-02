@@ -4,7 +4,6 @@ const uniqid = require('uniqid');
 const app = express()
 const server = require('http').createServer(app)
 const io = require('socket.io')(server)
-const open = require("open");
 
 /**
   * @const {array} todoList - Array of todo object.
@@ -169,5 +168,4 @@ server.listen(3000, () => {
   console.log('Server started on port 3000')
   console.log('[url] http://localhost:3000')
   console.log('[url] http://127.0.0.1:3000/')
-  open("http://localhost:3000/")
 })
